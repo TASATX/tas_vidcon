@@ -24,7 +24,8 @@ const Home = () => {
         </div>
       </div>
 
-  <MeetingTypeList />
+      <MeetingTypeList />
+
     </section>
   );
 };

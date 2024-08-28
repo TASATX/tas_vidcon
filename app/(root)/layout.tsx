@@ -1,17 +1,12 @@
 import React, { ReactNode } from "react";
-
-import Navbar from "@/components/Navbar";
-import Sidebar from '../../components/Sidebar';
+import StreamVideoProvider from "./providers/streamClientProvider";
 
 const RootLayout =({ children } : { children: ReactNode }) => {
     return (
         <main>
-            <Navbar />
-
-            <Sidebar />
-
-            {children}
-            
+            <StreamVideoProvider>
+                {children}            
+            </StreamVideoProvider>
         </main>
     )
 }
