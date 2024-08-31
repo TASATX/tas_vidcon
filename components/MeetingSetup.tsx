@@ -9,7 +9,7 @@ import Alert from'./Alert';
 const MeetingSetup = ({ 
     setIsSetupComplete,
  }: {
-    setIsSetupComplete: ( value: boolean) => void;
+    setIsSetupComplete: ( value: boolean ) => void;
 }) => {
     const { useCallEndedAt, useCallStartsAt } = useCallStateHooks();
     const callStartsAt = useCallStartsAt();
