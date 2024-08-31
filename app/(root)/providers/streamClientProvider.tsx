@@ -1,6 +1,6 @@
 'use client';
 
-import Loader from '@/components/ui/Loader';
+import Loader from '@/components/Loader';
 import { useUser } from '@clerk/nextjs';
 import { StreamVideo, StreamVideoClient } from '@stream-io/video-react-sdk';
 import { ReactNode, useEffect, useState } from 'react';

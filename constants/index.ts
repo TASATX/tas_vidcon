@@ -12,7 +12,7 @@ export const sidebarLinks = [
     {
         label: 'Previous Meetings',
         route: '/previous',
-        imgUrl: '/icons/something.svg',
+        imgUrl: '/icons/previous.svg',
     },
     {
         label: 'Recordings',
@@ -22,6 +22,6 @@ export const sidebarLinks = [
     {
         label: 'Personal Room',
         route: '/personal-rooms',
-        imgUrl: '/icons/add.personal.svg',
+        imgUrl: '/icons/add.add-meeting.svg',
     },
 ]

@@ -1,7 +1,7 @@
 'use client'
 
-import HomeCard from '@/components/ui/HomeCard';
-import MeetingTypeList from '@/components/ui/MeetingTypeList';
+import HomeCard from '@/components/HomeCard';
+import MeetingTypeList from '@/components/MeetingTypeList';
 import React from 'react';
 
 const Home = () => {

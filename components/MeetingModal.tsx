@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { Dialog, DialogContent } from "@/components/ui/dialog"
   import Image from 'next/image';
-import { Button } from './button';
+import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 
 interface MeetingModalProps {
