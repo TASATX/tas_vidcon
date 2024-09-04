@@ -5,7 +5,7 @@ import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 export const useGetCalls = () => {
   const { user } = useUser();
   const client = useStreamVideoClient();
-  const [calls, setCalls] = useState<Call[]>();
+  const [calls, setCalls] = useState<Call[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export const useGetCalls = () => {
   const now = new Date();
 
   const endedCalls = calls?.filter(({ state: { startsAt, endedAt } }: Call) => {
-    return (startsAt && new Date(startsAt) < now) || !!endedAt
+    return (startsAt && new Date(startsAt) < now || !!endedAt)
   })
 
   const upcomingCalls = calls?.filter(({ state: { startsAt } }: Call) => {

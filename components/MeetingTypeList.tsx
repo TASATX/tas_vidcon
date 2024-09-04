@@ -101,7 +101,7 @@ const createMeeting = async () => {
           />
       {!callDetail ? (    
         <MeetingModal
-          isOpen={meetingState === 'isInstantMeeting'}
+          isOpen={meetingState === 'isScheduleMeeting'}
           onClose={() => setMeetingState(undefined)}
           title='Create Meeting'
           handleClick={createMeeting}
@@ -111,7 +111,7 @@ const createMeeting = async () => {
             Add a description
           </label>
           <Textarea
-            className='border-none bg-dark-3 focus-visible:ring-offset-0'
+            className='border-none bg-dark-3 focus-visible:ring-0 focus-visible-ring-offset-0'
             onChange={(e) =>
               setValues({...values, description: e.target.value })
             }            
@@ -138,13 +138,13 @@ const createMeeting = async () => {
         isOpen={meetingState === 'isScheduleMeeting'}
         onClose={() => setMeetingState(undefined)}
         title="Meeting Created"
+        className='text-center'
         handleClick={() => {
           navigator.clipboard.writeText(meetingLink);
           toast({ title: 'Link Copied' });
         }}
         image={'/icons/checked.svg'}
         buttonIcon="/icons/copy.svg"
-        className="text-center"
         buttonText="Copy Meeting Link"
       />
     )}
@@ -170,8 +170,11 @@ const createMeeting = async () => {
       title="Start an Instant Meeting"
       className="text-center"
       buttonText="Start Meeting"
-      handleClick={createMeeting}
-         />      
+      handleClick={createMeeting}>
+test
+test
+
+    </MeetingModal>      
       </section>
   );
 };
